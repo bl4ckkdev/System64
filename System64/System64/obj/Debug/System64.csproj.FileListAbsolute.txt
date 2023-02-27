@@ -1,0 +1,11 @@
+C:\Users\Theocharis\Documents\GitHub\System64\System64\System64\bin\Debug\System64.exe.config
+C:\Users\Theocharis\Documents\GitHub\System64\System64\System64\bin\Debug\System64.exe
+C:\Users\Theocharis\Documents\GitHub\System64\System64\System64\bin\Debug\System64.pdb
+C:\Users\Theocharis\Documents\GitHub\System64\System64\System64\obj\Debug\System64.csproj.AssemblyReference.cache
+C:\Users\Theocharis\Documents\GitHub\System64\System64\System64\obj\Debug\System64.csproj.SuggestedBindingRedirects.cache
+C:\Users\Theocharis\Documents\GitHub\System64\System64\System64\obj\Debug\System64.Form1.resources
+C:\Users\Theocharis\Documents\GitHub\System64\System64\System64\obj\Debug\System64.Properties.Resources.resources
+C:\Users\Theocharis\Documents\GitHub\System64\System64\System64\obj\Debug\System64.csproj.GenerateResource.cache
+C:\Users\Theocharis\Documents\GitHub\System64\System64\System64\obj\Debug\System64.csproj.CoreCompileInputs.cache
+C:\Users\Theocharis\Documents\GitHub\System64\System64\System64\obj\Debug\System64.exe
+C:\Users\Theocharis\Documents\GitHub\System64\System64\System64\obj\Debug\System64.pdb

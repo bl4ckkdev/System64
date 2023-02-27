@@ -25,7 +25,8 @@ namespace System64
 				DialogResult secondwarning = MessageBox.Show("THIS IS THE LAST WARNING, IT WILL DESTROY THE BOOTLOADER WE ARE NOT RESPONSIBLE FOR ANY DAMAGES THIS IS JUST FOR FUN, ARE YOU SURE YOU WANT TO RUN IT?", "LAST WARNING", MessageBoxButtons.YesNo, MessageBoxIcon.Stop);
 				if (secondwarning == DialogResult.Yes)
 				{
-
+					this.FormBorderStyle = FormBorderStyle.None;
+					this.WindowState = FormWindowState.Maximized;
 				}
 				else if (secondwarning == DialogResult.No)
 				{
