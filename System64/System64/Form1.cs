@@ -17,6 +17,8 @@ namespace System64
 			InitializeComponent();
 		}
 
+		public int time;
+
 		private void Form1_Load(object sender, EventArgs e)
 		{
 			DialogResult firstwarning = MessageBox.Show("This virus is no joke, do you want to run?", "Warning", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
@@ -27,6 +29,7 @@ namespace System64
 				{
 					this.FormBorderStyle = FormBorderStyle.None;
 					this.WindowState = FormWindowState.Maximized;
+					timer1.Start();
 				}
 				else if (secondwarning == DialogResult.No)
 				{
@@ -38,6 +41,19 @@ namespace System64
 			{
 				this.Close();
 				Application.Exit();
+			}
+		}
+
+		private void timer1_Tick(object sender, EventArgs e)
+		{
+			if (time != 100)
+			{
+				label2.Text = $"{time}% complete";
+				time++;
+			} else
+			{
+				MessageBox.Show("Virus!!");
+				timer1.Stop();
 			}
 		}
 	}
