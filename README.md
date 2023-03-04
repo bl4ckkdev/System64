@@ -1,2 +1,5 @@
 # About System64
-System64 is a malware made for fun
+goofy malware lol
+it overrides the mbr (though it's easily fixed)
+
+if you run this beware that there are no warnings
