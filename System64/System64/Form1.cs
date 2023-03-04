@@ -18,6 +18,7 @@ namespace System64
 		}
 
 		public int time;
+		public bool isSafe = true;
 
 		private void Form1_Load(object sender, EventArgs e)
 		{
@@ -46,8 +47,12 @@ namespace System64
 
 		private void timer1_Tick(object sender, EventArgs e)
 		{
+			Random rnd = new Random();
 			if (time != 100)
 			{
+				timer1.Tick += timer1_Tick;
+				timer1.Interval = rnd.Next(500, 1000);
+
 				label2.Text = $"{time}% complete";
 				time++;
 			} else

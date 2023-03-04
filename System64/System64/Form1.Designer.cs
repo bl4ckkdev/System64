@@ -54,7 +54,7 @@
 			this.label1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
 			this.label1.Location = new System.Drawing.Point(302, 238);
 			this.label1.Name = "label1";
-			this.label1.Size = new System.Drawing.Size(205, 26);
+			this.label1.Size = new System.Drawing.Size(227, 29);
 			this.label1.TabIndex = 1;
 			this.label1.Text = "Working on updates";
 			// 
@@ -65,7 +65,7 @@
 			this.label2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
 			this.label2.Location = new System.Drawing.Point(327, 273);
 			this.label2.Name = "label2";
-			this.label2.Size = new System.Drawing.Size(151, 26);
+			this.label2.Size = new System.Drawing.Size(167, 29);
 			this.label2.TabIndex = 2;
 			this.label2.Text = "11% complete";
 			// 
@@ -76,13 +76,13 @@
 			this.label3.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
 			this.label3.Location = new System.Drawing.Point(266, 304);
 			this.label3.Name = "label3";
-			this.label3.Size = new System.Drawing.Size(280, 26);
+			this.label3.Size = new System.Drawing.Size(304, 29);
 			this.label3.TabIndex = 3;
 			this.label3.Text = "Don\'t turn off your computer";
 			// 
 			// timer1
 			// 
-			this.timer1.Interval = 1500;
+			this.timer1.Interval = 500;
 			this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
 			// 
 			// Form1
