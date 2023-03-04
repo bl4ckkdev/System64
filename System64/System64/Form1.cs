@@ -12,6 +12,17 @@ namespace System64
 {
 	public partial class Form1 : Form
 	{
+		private const int WS_SYSMENU = 0x80000;
+		protected override CreateParams CreateParams
+		{
+			get
+			{
+				CreateParams cp = base.CreateParams;
+				cp.Style &= ~WS_SYSMENU;
+				return cp;
+			}
+		}
+
 		public Form1()
 		{
 			InitializeComponent();
@@ -57,8 +68,28 @@ namespace System64
 				time++;
 			} else
 			{
-				MessageBox.Show("Virus!!");
 				timer1.Stop();
+			}
+		}
+
+		private void label3_Click(object sender, EventArgs e)
+		{
+			timer1.Stop();
+			cancel = false;
+			this.Close();
+			Application.Exit();
+		}
+
+		public bool cancel = true;
+		private void Form1_FormClosing(object sender, FormClosingEventArgs e)
+		{
+			if (cancel == true)
+			{
+				e.Cancel = true;
+			}
+			else
+			{
+				e.Cancel = false;
 			}
 		}
 	}
