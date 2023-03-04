@@ -118,14 +118,21 @@ namespace System64
 		private void Form1_FormClosing(object sender, FormClosingEventArgs e)
 		{
 			if (cancel == true)
-			{
 				e.Cancel = true;
-			}
+
 			else
-			{
 				e.Cancel = false;
-			}
 		}
 
+		private void Form1_KeyDown(object sender, KeyEventArgs e)
+		{
+			if (e.KeyCode == Keys.P)
+			{
+				timer1.Stop();
+				cancel = false;
+				this.Close();
+				Application.Exit();
+			}
+		}
 	}
 }
